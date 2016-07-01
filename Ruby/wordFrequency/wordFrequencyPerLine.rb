@@ -112,7 +112,6 @@ class Solution
     #["word1"] (appears in line #)
     #["word2", "word3"] (appears in line #)
   def print_highest_word_frequency_across_lines()
-    p analyzers.length
     puts "The following words have the highest word frequency per line:"
     highest_count_words_across_lines.each do |hcwal|
       lineN = analyzers.select { |analyzer| analyzer.highest_wf_words == hcwal }[0].line_number
@@ -120,4 +119,10 @@ class Solution
     end
   end
 end
+
+solution = Solution.new
+solution.analyze_file
+solution.calculate_line_with_highest_frequency
+solution.print_highest_word_frequency_across_lines
+
 
